@@ -1,0 +1,77 @@
+*.param a IF(VG<0.05,0.7e-11,1e-3)
+.param c -2.4
+
+**** PWL DESCRIPTION OF PARAMETER a FOR THE EXPONENTIAL BULK CURRENT MODEL ****
+Bpa1 NC_a01 npa I=IF(V(G)<0.05,0.7e-11,0)
+Bpa2 NC_a01 npa I=IF(V(G)>=0.05&V(G)<0.1,0.7e-11,0)
+Bpa3 NC_a01 npa I=IF(V(G)>=0.1&V(G)<0.15,0.65e-11,0)
+Bpa4 NC_a01 npa I=IF(V(G)>=0.15&V(G)<0.2,0.65e-11,0)
+Bpa5 NC_a01 npa I=IF(V(G)>=0.2&V(G)<0.25,2.25e-11,0)
+Bpa6 NC_a01 npa I=IF(V(G)>=0.25&V(G)<0.3,4e-11,0)
+Bpa7 NC_a01 npa I=IF(V(G)>=0.3&V(G)<0.35,1.6e-10,0)
+Bpa8 NC_a01 npa I=IF(V(G)>=0.35&V(G)<0.4,2e-10,0)
+Bpa9 NC_a01 npa I=IF(V(G)>=0.4&V(G)<0.45,6.2e-10,0)
+Bpa10 NC_a01 npa I=IF(V(G)>=0.45&V(G)<0.5,9.5e-10,0)
+Bpa11 NC_a01 npa I=IF(V(G)>=0.5&V(G)<0.55,1e-9,0)
+Bpa12 NC_a01 npa I=IF(V(G)>=0.55,1.2e-9,0)
+Rpa	 NC_a01 0 1e-6
+
+**** PWL DESCRIPTION OF PARAMETER b FOR THE EXPONENTIAL BULK CURRENT MODEL ****
+Bpb1 NC_b01 npb I=IF(V(G)<0.05,6,0)
+Bpb2 NC_b01 npb I=IF(V(G)>=0.05&V(G)<0.1,6,0)
+Bpb3 NC_b01 npb I=IF(V(G)>=0.1&V(G)<0.15,5.7,0)
+Bpb4 NC_b01 npb I=IF(V(G)>=0.15&V(G)<0.2,5.2,0)
+Bpb5 NC_b01 npb I=IF(V(G)>=0.2&V(G)<0.25,5.15,0)
+Bpb6 NC_b01 npb I=IF(V(G)>=0.25&V(G)<0.3,5,0)
+Bpb7 NC_b01 npb I=IF(V(G)>=0.3&V(G)<0.35,4.05,0)
+Bpb8 NC_b01 npb I=IF(V(G)>=0.35&V(G)<0.4,4.5,0)
+Bpb9 NC_b01 npb I=IF(V(G)>=0.4&V(G)<0.45,4.6,0)
+Bpb10 NC_b01 npb I=IF(V(G)>=0.45&V(G)<0.5,4.6,0)
+Bpb11 NC_b01 npb I=IF(V(G)>=0.5&V(G)<0.55,5.4,0)
+Bpb12 NC_b01 npb I=IF(V(G)>=0.55,5.4,0)
+Rpb	 NC_b01 0 1e-6
+
+**** PWL DESCRIPTION OF PARAMETER d FOR THE POWER LAW BULK CURRENT MODEL ****
+Bpd1 NC_d01 npd I=IF(V(G)<0.05,5.6e-11,0)
+Bpd2 NC_d01 npd I=IF(V(G)>=0.05&V(G)<0.1,4.5e-11,0)
+Bpd3 NC_d01 npd I=IF(V(G)>=0.1&V(G)<0.15,4.5e-11,0)
+Bpd4 NC_d01 npd I=IF(V(G)>=0.15&V(G)<0.2,4.0e-11,0)
+Bpd5 NC_d01 npd I=IF(V(G)>=0.2&V(G)<0.25,3.0e-11,0)
+Bpd6 NC_d01 npd I=IF(V(G)>=0.25&V(G)<0.3,1.0e-10,0)
+Bpd7 NC_d01 npd I=IF(V(G)>=0.3&V(G)<0.35,2.5e-10,0)
+Bpd8 NC_d01 npd I=IF(V(G)>=0.35&V(G)<0.4,1.8e-10,0)
+Bpd9 NC_d01 npd I=IF(V(G)>=0.4&V(G)<0.45,4.0e-10,0)
+Bpd10 NC_d01 npd I=IF(V(G)>=0.45&V(G)<0.5,5.0e-10,0)
+Bpd11 NC_d01 npd I=IF(V(G)>=0.5&V(G)<0.55,8.8e-10,0)
+Bpd12 NC_d01 npd I=IF(V(G)>=0.55,8.8e-10,0)
+Rpd	 NC_d01 0 1e-6
+
+**** PWL DESCRIPTION OF PARAMETER e FOR THE POWER LAW BULK CURRENT MODEL ****
+Bpe1 NC_e01 npe I=IF(V(G)<0.05,6.7,0)
+Bpe2 NC_e01 npe I=IF(V(G)>=0.05&V(G)<0.1,6.7,0)
+Bpe3 NC_e01 npe I=IF(V(G)>=0.1&V(G)<0.15,6.7,0)
+Bpe4 NC_e01 npe I=IF(V(G)>=0.15&V(G)<0.2,6.7,0)
+Bpe5 NC_e01 npe I=IF(V(G)>=0.2&V(G)<0.25,5.5,0)
+Bpe6 NC_e01 npe I=IF(V(G)>=0.25&V(G)<0.3,3.6,0)
+Bpe7 NC_e01 npe I=IF(V(G)>=0.3&V(G)<0.35,3.4,0)
+Bpe8 NC_e01 npe I=IF(V(G)>=0.35&V(G)<0.4,5.0,0)
+Bpe9 NC_e01 npe I=IF(V(G)>=0.4&V(G)<0.45,5.25,0)
+Bpe10 NC_e01 npe I=IF(V(G)>=0.45&V(G)<0.5,6.2,0)
+Bpe11 NC_e01 npe I=IF(V(G)>=0.5&V(G)<0.55,6.6,0)
+Bpe12 NC_e01 npe I=IF(V(G)>=0.55,7.25,0)
+Rpe	 NC_e01 0 1e-6
+
+**** PWL DESCRIPTION OF PARAMETER f FOR THE POWER LAW BULK CURRENT MODEL ****
+Bpf1 NC_f01 npf I=IF(V(G)<0.05,-1.40,0)
+Bpf2 NC_f01 npf I=IF(V(G)>=0.05&V(G)<0.1,-1.40,0)
+Bpf3 NC_f01 npf I=IF(V(G)>=0.1&V(G)<0.15,-1.44,0)
+Bpf4 NC_f01 npf I=IF(V(G)>=0.15&V(G)<0.2,-1.44,0)
+Bpf5 NC_f01 npf I=IF(V(G)>=0.2&V(G)<0.25,-1.38,0)
+Bpf6 NC_f01 npf I=IF(V(G)>=0.25&V(G)<0.3,-1.44,0)
+Bpf7 NC_f01 npf I=IF(V(G)>=0.3&V(G)<0.35,-1.40,0)
+Bpf8 NC_f01 npf I=IF(V(G)>=0.35&V(G)<0.4,-0.95,0)
+Bpf9 NC_f01 npf I=IF(V(G)>=0.4&V(G)<0.45,-0.85,0)
+Bpf10 NC_f01 npf I=IF(V(G)>=0.45&V(G)<0.5,-0.7,0)
+Bpf11 NC_f01 npf I=IF(V(G)>=0.5&V(G)<0.55,-0.65,0)
+Bpf12 NC_f01 npf I=IF(V(G)>=0.55,-0.55,0)
+Rpf	 NC_f01 0 1e-6
